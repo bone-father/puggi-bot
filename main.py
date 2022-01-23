@@ -20,10 +20,10 @@ async def on_message(message):
 
 @bot.command()
 async def nicole(ctx):
-    await ctx.send(file=discord.File('nicole.jpg'))
+    await ctx.send(file=discord.File(r'images\nicole.jpg'))
 
 @bot.command()
 async def zach(ctx):
-    await ctx.send(file=discord.File('zach.jpg'))
+    await ctx.send(file=discord.File('images\zach.jpg'))
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
