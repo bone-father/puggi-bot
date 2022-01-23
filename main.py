@@ -21,6 +21,7 @@ async def on_message(message):
 async def nicole(ctx):
     await ctx.send('https://cdn.discordapp.com/attachments/934608180896485437/934608395783249980/nicole.jpg')
 
+@bot.command()
 async def zach(ctx):
     await ctx.send('https://cdn.discordapp.com/attachments/934608180896485437/934612074032668725/zach.jpg')
 
