@@ -1,3 +1,4 @@
+import discord
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='-')
@@ -19,10 +20,10 @@ async def on_message(message):
 
 @bot.command()
 async def nicole(ctx):
-    await ctx.send('https://cdn.discordapp.com/attachments/934608180896485437/934608395783249980/nicole.jpg')
+    await ctx.send(file=discord.File('nicole.jpg'))
 
 @bot.command()
 async def zach(ctx):
-    await ctx.send('https://cdn.discordapp.com/attachments/934608180896485437/934612074032668725/zach.jpg')
+    await ctx.send(file=discord.File('zach.jpg'))
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
