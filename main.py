@@ -59,5 +59,9 @@ async def zach(ctx):
 @bot.command()
 async def wendy(ctx):
     await ctx.send("go fuck yourself")
+    
+@bot.command()
+async def lucas(ctx):
+    await ctx.send(file=discord.File('images/lucas.jpg'))
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
