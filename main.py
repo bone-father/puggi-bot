@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import random
 
-bot = commands.Bot(command_prefix='-')
+bot = commands.Bot(command_prefix='=')
 
 honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-16237480", 
              "https://tenor.com/view/thug-life-deal-with-it-gif-20556615", 
