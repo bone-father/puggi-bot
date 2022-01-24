@@ -76,4 +76,8 @@ async def xander(ctx):
 async def ratemychances(ctx):
     await ctx.send('https://www.conestogac.on.ca/')
 
+@bot.command()
+async def scream(ctx):
+    await ctx.send('A' + 'H'*309)
+
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
