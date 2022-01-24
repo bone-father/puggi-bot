@@ -44,24 +44,18 @@ async def on_message(message):
 
         sentence = message.content.lower()
         mitten = "mitten"
-
         count = 0
 
         for i in range(len(sentence)-5):
-            
             if sentence[i] == 'm':
-
                 word = ""
-
                 for k in range(6):
                     word = word + sentence[i+k]
-
                 if word == mitten:
                     count = count + 1
 
         if count > 33:
             await message.channel.send("i don't have enough characters for this shit " + "<:void:935298651780161576>")
-
         else:
             await message.channel.send("Well yes, I'd love to cum in your mittens thanks for asking\n"*count)
 
