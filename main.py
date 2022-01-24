@@ -79,5 +79,9 @@ async def ratemychances(ctx):
 @bot.command()
 async def scream(ctx):
     await ctx.send('A' + 'H'*309)
-
+    
+@bot.command()
+async def zomer(ctx):
+    await ctx.send('https://cdn.weeb.sh/images/rJ4E1ep7f.gif')
+    
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
