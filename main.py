@@ -50,18 +50,26 @@ async def on_message(message):
 
 @bot.command()
 async def nicole(ctx):
-    await ctx.send(file=discord.File(r'images/nicole.jpg'))
+    await ctx.send(file=discord.File('images/nicole.jpg'))
 
 @bot.command()
 async def zach(ctx):
     await ctx.send(file=discord.File('images/zach.jpg'))
-    
+
 @bot.command()
 async def wendy(ctx):
     await ctx.send("go fuck yourself")
-    
+
 @bot.command()
 async def lucas(ctx):
     await ctx.send(file=discord.File('images/lucas.jpg'))
+
+@bot.command()
+async def syed(ctx):
+    await ctx.send(file=discord.File('images/syed.jpg'))
+
+@bot.command()
+async def xander(ctx):
+    await ctx.send(file=discord.File('images/xander.jpg'))
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
