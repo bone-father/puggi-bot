@@ -41,7 +41,29 @@ async def on_message(message):
         return
 
     if "mitten" in message.content.lower():
-        await message.channel.send("Well yes, I'd love to cum in your mittens thanks for asking")
+
+        sentence = message.content.lower()
+        mitten = "mitten"
+
+        count = 0
+
+        for i in range(len(sentence)-5):
+            
+            if sentence[i] == 'm':
+
+                word = ""
+
+                for k in range(6):
+                    word = word + sentence[i+k]
+
+                if word == mitten:
+                    count = count + 1
+
+        if count > 33:
+            await message.channel.send("i don't have enough characters for this shit " + "<:void:935298651780161576>")
+
+        else:
+            await message.channel.send("Well yes, I'd love to cum in your mittens thanks for asking\n"*count)
 
     if "honk" in message.content.lower() or "honque" in message.content.lower():
         await message.channel.send(random.choice(honk_gifs))
@@ -79,9 +101,9 @@ async def ratemychances(ctx):
 @bot.command()
 async def scream(ctx):
     await ctx.send('A' + 'H'*309)
-    
+
 @bot.command()
 async def zomer(ctx):
     await ctx.send('https://cdn.weeb.sh/images/rJ4E1ep7f.gif')
-    
+
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
