@@ -72,4 +72,8 @@ async def syed(ctx):
 async def xander(ctx):
     await ctx.send(file=discord.File('images/xander.jpg'))
 
+@bot.command()
+async def ratemychances(ctx):
+    await ctx.send('https://www.conestogac.on.ca/')
+
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
