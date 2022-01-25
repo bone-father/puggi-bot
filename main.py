@@ -150,10 +150,12 @@ async def heart(ctx, emoji):
                 break
 
     if emoji == "gub":
-        r_1 = "_               _ gub gub gub                                        gub gub gub\n"
+        r_1 = "_               _ gub gub gub                                        gub gub gub \n"
         r_2 = "        gub gub gub gub gub                         gub gub gub gub gub\n"
-        r_3 = "gub gub gub gub gub gub gub         gub gub gub gub gub gub gub\n"
-        r_4_9 = "gub gub gub gub gub gub gub gub gub gub gub gub gub gub gub\n"
+        r_3 = "    gub gub gub gub gub gub                 gub gub gub gub gub gub\n"
+        r_4 = "gub gub gub gub gub gub gub         gub gub gub gub gub gub gub\n"
+        r_5_8 = "gub gub gub gub gub gub gub gub gub gub gub gub gub gub gub\n"
+        r_9 = "    gub gub gub gub gub gub gub gub gub gub gub gub gub gub\n"
         r_10 = "        gub gub gub gub gub gub gub gub gub gub gub gub gub\n"
         r_11 = "                gub gub gub gub gub gub gub gub gub gub gub\n"
         r_12 = "                        gub gub gub gub gub gub gub gub gub\n"
@@ -161,6 +163,6 @@ async def heart(ctx, emoji):
         r_14 = "                                        gub gub gub gub gub\n"
         r_15 = "                                                gub gub gub\n"
         r_16 = "                                                        gub"
-        await ctx.send(r_1 + r_2 + r_3 + r_4_9*6 + r_10 + r_11 + r_12 + r_13 + r_14 + r_15 + r_16)
+        await ctx.send(r_1 + r_2 + r_3 + r_4 + r_5_8*4 + r_9 + r_10 + r_11 + r_12 + r_13 + r_14 + r_15 + r_16)
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
