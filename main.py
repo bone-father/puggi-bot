@@ -3,6 +3,7 @@ from discord.ext import commands
 import random
 
 bot = commands.Bot(command_prefix='=', help_command=None)
+embed_colour = discord.Colour.from_rgb(117, 211, 240)
 
 honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-16237480", 
              "https://tenor.com/view/thug-life-deal-with-it-gif-20556615", 
@@ -32,7 +33,7 @@ honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-1623
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="All You Sexy Lesbians"))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Porn"))
     print('We have logged in as {0.user}'.format(bot))
 
 @bot.event
@@ -89,7 +90,7 @@ async def help(ctx):
     help = discord.Embed(
         title = "cum",
         description = "prefix is '='",
-        colour = discord.Colour.from_rgb(117, 211, 240)
+        colour = embed_colour
     )
 
     help.add_field(name="people commands", value="bohdan\nlucas\nnicole\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
@@ -150,15 +151,14 @@ async def heart(ctx, emoji):
                 (emoji*9 + '\n'), (cock + emoji*7 + cock + '\n'), (cock*2 + emoji*5 + cock*2 + '\n'), 
                 (cock*3 + emoji*3 + cock*3 + '\n'), (cock*4 + emoji + cock*4)]
     heart_2 = heart[0] + heart[1] + heart[2]*2 + heart[3] + heart[4] + heart[5] + heart[6]
+    heart_3 = discord.Embed(title = "uwu <3", description = heart_2, colour = embed_colour)
     character_list = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()`-=~_+[]\;\',./{}|:"<>?'
     emoji_id = emoji[-19:-1:1]
     message_sent = False
 
     for i in ctx.guild.emojis:
         if len(emoji_id) == 18 and emoji[0] == '<' and emoji[-1] == '>' and emoji_id in str(i):
-            if len(emoji) > 29:
-                await ctx.send("i don't have enough characters for this shit " + "<:void:935298651780161576>")
-            await ctx.send(heart_2)
+            await ctx.send(embed=heart_3)
             message_sent = True
             break
 
@@ -167,7 +167,7 @@ async def heart(ctx, emoji):
             if char in character_list:
                 break
             else:
-                await ctx.send(heart_2)
+                await ctx.send(embed=heart_3)
                 break
 
     if emoji == "gub":
