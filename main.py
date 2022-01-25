@@ -46,6 +46,7 @@ async def on_message(message):
 
         sentence = message.content.lower()
         mitten = "mitten"
+        lucas = "Well yes, I'd love to cum in your mittens thanks for asking\n"
         count = 0
 
         for i in range(len(sentence)-5):
@@ -55,12 +56,14 @@ async def on_message(message):
                     word = word + sentence[i+k]
                 if word == mitten:
                     count = count + 1
-
-        if count > 68:
-            await message.channel.send("i don't have enough characters for this shit " + "<:void:935298651780161576>")
-        else:
-            cum_mittens = discord.Embed(description = "Well yes, I'd love to cum in your mittens thanks for asking\n"*count, colour = embed_colour)
+                    
+        if count <= 33:
+            await message.channel.send(lucas*count)
+        elif count > 33 and count <= 68:
+            cum_mittens = discord.Embed(description = lucas*count, colour = embed_colour)
             await message.channel.send(embed=cum_mittens)
+        else:
+            await message.channel.send("i don't have enough characters for this shit " + "<:void:935298651780161576>")
 
     if "gub" in message.content.lower() and "=heart" not in message.content:
 
