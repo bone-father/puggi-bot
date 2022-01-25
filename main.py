@@ -32,6 +32,7 @@ honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-1623
 
 @bot.event
 async def on_ready():
+    await bot.change_presence(activity=discord.Game(name="ur mom"))
     print('We have logged in as {0.user}'.format(bot))
 
 @bot.event
