@@ -32,7 +32,7 @@ honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-1623
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Porn"))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="All You Sexy Lesbians"))
     print('We have logged in as {0.user}'.format(bot))
 
 @bot.event
