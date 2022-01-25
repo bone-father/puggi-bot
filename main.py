@@ -84,7 +84,7 @@ async def on_message(message):
     if "honk" in message.content.lower() or "honque" in message.content.lower():
         await message.channel.send(random.choice(honk_gifs))
 
-    if "coop" in message.content.lower() or "co-op" in message.content.lower():
+    if "coop" in message.content.lower() or "co op" in message.content.lower() or "co-op" in message.content.lower():
         await message.channel.send("interview selections complete")
 
     await bot.process_commands(message)
