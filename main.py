@@ -82,6 +82,17 @@ async def on_message(message):
 
         await message.channel.send("gub "*count)
 
+    if "cope" in message.content.lower():
+        await message.channel.send("don't care + didn't ask + cry about it + stay mad + get real + L + mald seethe cope harder + hoes mad + basic + skill issue + ratio + you fell off + the audacity + triggered + any askers + redpilled + get a life + ok and? + cringe + touch grass + donowalled + not based + your're a (insert stereotype) + not funny didn't laugh + you're* + grammar issue + go outside + get good + reported + ad hominem + GG! + ur mom + cope")
+        time.sleep(1.8)
+        await message.channel.send("+ bluepilled")
+        time.sleep(0.4)
+        await message.channel.send("+ strawman")
+        time.sleep(0.2)
+        await message.channel.send("+ slippery slope")
+        time.sleep(0.08)
+        await message.channel.send("+ gamblers fallacy")
+
     if "honk" in message.content.lower() or "honque" in message.content.lower():
         await message.channel.send(random.choice(honk_gifs))
 
@@ -99,7 +110,7 @@ async def help(ctx):
     )
 
     help.add_field(name="people commands", value="bohdan\nlucas\nnicole\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
-    help.add_field(name="other stuff idk", value="cock <emoji>\ncope\nheart <emoji>\npat\nrate\nscream", inline=True)
+    help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\npat\nrate\nscream", inline=True)
     help.set_footer(text="lol get fucked")
     help.set_image(url="https://cdn.discordapp.com/attachments/893186562274234408/935379384116850738/monke.gif")
 
@@ -217,17 +228,5 @@ async def cock(ctx, emoji):
             else:
                 await ctx.send(embed=dick_3)
                 break
-
-@bot.command()
-async def cope(ctx):
-    await ctx.send("don't care + didn't ask + cry about it + stay mad + get real + L + mald seethe cope harder + hoes mad + basic + skill issue + ratio + you fell off + the audacity + triggered + any askers + redpilled + get a life + ok and? + cringe + touch grass + donowalled + not based + your're a (insert stereotype) + not funny didn't laugh + you're* + grammar issue + go outside + get good + reported + ad hominem + GG! + ur mom + cope")
-    time.sleep(1.8)
-    await ctx.send("+ bluepilled")
-    time.sleep(0.4)
-    await ctx.send("+ strawman")
-    time.sleep(0.2)
-    await ctx.send("+ slippery slope")
-    time.sleep(0.08)
-    await ctx.send("+ gamblers fallacy")
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
