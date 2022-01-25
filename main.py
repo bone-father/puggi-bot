@@ -60,6 +60,22 @@ async def on_message(message):
         else:
             await message.channel.send("Well yes, I'd love to cum in your mittens thanks for asking\n"*count)
 
+    if "gub" in message.content.lower() and "=heart" not in message.content:
+
+        sentence = message.content.lower()
+        gub = "gub"
+        count = 0
+
+        for i in range(len(sentence)-2):
+            if sentence[i] == 'g':
+                word = ""
+                for k in range(3):
+                    word = word + sentence[i+k]
+                if word == gub:
+                    count = count + 1
+
+        await message.channel.send("gub "*count)
+
     if "honk" in message.content.lower() or "honque" in message.content.lower():
         await message.channel.send(random.choice(honk_gifs))
 
