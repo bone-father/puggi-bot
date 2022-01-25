@@ -125,6 +125,10 @@ async def scream(ctx):
 @bot.command()
 async def heart(ctx, emoji):
     cock = '<:x_:935311266845712384>'
+    heart = [(cock + emoji*2 + cock*3 + emoji*2 + cock + '\n'), (emoji*4 + cock + emoji*4 + '\n'), 
+                (emoji*9 + '\n'), (cock + emoji*7 + cock + '\n'), (cock*2 + emoji*5 + cock*2 + '\n'), 
+                (cock*3 + emoji*3 + cock*3 + '\n'), (cock*4 + emoji + cock*4)]
+    heart_2 = heart[0] + heart[1] + heart[2]*2 + heart[3] + heart[4] + heart[5] + heart[6]
     character_list = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()`-=~_+[]\;\',./{}|:"<>?'
     emoji_id = emoji[-19:-1:1]
     message_sent = False
@@ -133,10 +137,7 @@ async def heart(ctx, emoji):
         if len(emoji_id) == 18 and emoji[0] == '<' and emoji[-1] == '>' and emoji_id in str(i):
             if len(emoji) > 29:
                 await ctx.send("i don't have enough characters for this shit " + "<:void:935298651780161576>")
-            heart = [(cock + emoji*2 + cock*3 + emoji*2 + cock + '\n'), (emoji*4 + cock + emoji*4 + '\n'), 
-                     (emoji*9 + '\n'), (cock + emoji*7 + cock + '\n'), (cock*2 + emoji*5 + cock*2 + '\n'), 
-                     (cock*3 + emoji*3 + cock*3 + '\n'), (cock*4 + emoji + cock*4)]
-            await ctx.send(heart[0] + heart[1] + heart[2]*2 + heart[3] + heart[4] + heart[5] + heart[6])
+            await ctx.send(heart_2)
             message_sent = True
             break
 
@@ -145,10 +146,21 @@ async def heart(ctx, emoji):
             if char in character_list:
                 break
             else:
-                heart = [(cock + emoji*2 + cock*3 + emoji*2 + cock + '\n'), (emoji*4 + cock + emoji*4 + '\n'), 
-                         (emoji*9 + '\n'), (cock + emoji*7 + cock + '\n'), (cock*2 + emoji*5 + cock*2 + '\n'), 
-                         (cock*3 + emoji*3 + cock*3 + '\n'), (cock*4 + emoji + cock*4)]
-                await ctx.send(heart[0] + heart[1] + heart[2]*2 + heart[3] + heart[4] + heart[5] + heart[6])
+                await ctx.send(heart_2)
                 break
+
+    if emoji == "gub":
+        r_1 = "_               _ gub gub gub                                        gub gub gub\n"
+        r_2 = "        gub gub gub gub gub                         gub gub gub gub gub\n"
+        r_3 = "gub gub gub gub gub gub gub         gub gub gub gub gub gub gub\n"
+        r_4_9 = "gub gub gub gub gub gub gub gub gub gub gub gub gub gub gub\n"
+        r_10 = "        gub gub gub gub gub gub gub gub gub gub gub gub gub\n"
+        r_11 = "                gub gub gub gub gub gub gub gub gub gub gub\n"
+        r_12 = "                        gub gub gub gub gub gub gub gub gub\n"
+        r_13 = "                                gub gub gub gub gub gub gub\n"
+        r_14 = "                                        gub gub gub gub gub\n"
+        r_15 = "                                                gub gub gub\n"
+        r_16 = "                                                        gub"
+        await ctx.send(r_1 + r_2 + r_3 + r_4_9*6 + r_10 + r_11 + r_12 + r_13 + r_14 + r_15 + r_16)
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
