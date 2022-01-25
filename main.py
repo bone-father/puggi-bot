@@ -100,4 +100,27 @@ async def scream(ctx):
 async def zomer(ctx):
     await ctx.send('https://cdn.weeb.sh/images/rJ4E1ep7f.gif')
 
+@bot.command()
+async def heart(ctx, emoji):
+    cock = '<:x_:935311266845712384>'
+    character_list = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()`-=~_+[]\;\',./{}|:"<>?'
+    emoji_id = emoji[-19:-1:1]
+    message_sent = False
+
+    for i in ctx.guild.emojis:
+        if len(emoji_id) == 18 and emoji[0] == '<' and emoji[-1] == '>' and emoji_id in str(i):
+            heart = [(cock + emoji*2 + cock*3 + emoji*2 + cock + '\n'), (emoji*4 + cock + emoji*4 + '\n'), (emoji*9 + '\n'), (cock + emoji*7 + cock + '\n'), (cock*2 + emoji*5 + cock*2 + '\n'), (cock*3 + emoji*3 + cock*3 + '\n'), (cock*4 + emoji + cock*4)]
+            await ctx.send(heart[0] + heart[1] + heart[2]*2 + heart[3] + heart[4] + heart[5] + heart[6])
+            message_sent = True
+            break
+
+    if message_sent == False:
+        for char in emoji:
+            if char in character_list:
+                break
+            else:
+                heart = [(cock + emoji*2 + cock*3 + emoji*2 + cock + '\n'), (emoji*4 + cock + emoji*4 + '\n'), (emoji*9 + '\n'), (cock + emoji*7 + cock + '\n'), (cock*2 + emoji*5 + cock*2 + '\n'), (cock*3 + emoji*3 + cock*3 + '\n'), (cock*4 + emoji + cock*4)]
+                await ctx.send(heart[0] + heart[1] + heart[2]*2 + heart[3] + heart[4] + heart[5] + heart[6])
+                break
+
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
