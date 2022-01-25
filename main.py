@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import random
+import time
 
 bot = commands.Bot(command_prefix='=', help_command=None)
 embed_colour = discord.Colour.from_rgb(117, 211, 240)
@@ -56,7 +57,7 @@ async def on_message(message):
                     word = word + sentence[i+k]
                 if word == mitten:
                     count = count + 1
-                    
+
         if count <= 33:
             await message.channel.send(lucas*count)
         elif count > 33 and count <= 68:
@@ -98,7 +99,7 @@ async def help(ctx):
     )
 
     help.add_field(name="people commands", value="bohdan\nlucas\nnicole\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
-    help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\npat\nrate\nscream", inline=True)
+    help.add_field(name="other stuff idk", value="cock <emoji>\ncope\nheart <emoji>\npat\nrate\nscream", inline=True)
     help.set_footer(text="lol get fucked")
     help.set_image(url="https://cdn.discordapp.com/attachments/893186562274234408/935379384116850738/monke.gif")
 
@@ -216,5 +217,17 @@ async def cock(ctx, emoji):
             else:
                 await ctx.send(embed=dick_3)
                 break
-        
+
+@bot.command()
+async def cope(ctx):
+    await ctx.send("don't care + didn't ask + cry about it + stay mad + get real + L + mald seethe cope harder + hoes mad + basic + skill issue + ratio + you fell off + the audacity + triggered + any askers + redpilled + get a life + ok and? + cringe + touch grass + donowalled + not based + your're a (insert stereotype) + not funny didn't laugh + you're* + grammar issue + go outside + get good + reported + ad hominem + GG! + ur mom + cope")
+    time.sleep(1.8)
+    await ctx.send("+ bluepilled")
+    time.sleep(0.4)
+    await ctx.send("+ strawman")
+    time.sleep(0.2)
+    await ctx.send("+ slippery slope")
+    time.sleep(0.08)
+    await ctx.send("+ gamblers fallacy")
+
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
