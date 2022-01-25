@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import random
 
-bot = commands.Bot(command_prefix='=')
+bot = commands.Bot(command_prefix='=', help_command=None)
 
 honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-16237480", 
              "https://tenor.com/view/thug-life-deal-with-it-gif-20556615", 
@@ -66,6 +66,21 @@ async def on_message(message):
         await message.channel.send("interview selections complete")
 
     await bot.process_commands(message)
+
+@bot.command()
+async def help(ctx):
+    help = discord.Embed(
+        title = "cum",
+        description = "prefix is '='",
+        colour = discord.Colour.from_rgb(117, 211, 240)
+    )
+
+    help.add_field(name="people commands", value="bohdan\nlucas\nnicole\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
+    help.add_field(name="other stuff idk", value="heart\nratemychances\nscream", inline=True)
+    help.set_footer(text="lol get fucked")
+    help.set_image(url="https://cdn.discordapp.com/attachments/893186562274234408/935379384116850738/monke.gif")
+
+    await ctx.send(embed=help)
 
 @bot.command()
 async def nicole(ctx):
