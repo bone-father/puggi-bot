@@ -92,16 +92,20 @@ async def xander(ctx):
     await ctx.send(file=discord.File('images/xander.jpg'))
 
 @bot.command()
+async def zomer(ctx):
+    await ctx.send('https://cdn.weeb.sh/images/rJ4E1ep7f.gif')
+
+@bot.command()
+async def bohdan(ctx):
+    await ctx.send(file=discord.File('images/bohdan.jpg'))
+
+@bot.command()
 async def ratemychances(ctx):
     await ctx.send('https://www.conestogac.on.ca/')
 
 @bot.command()
 async def scream(ctx):
     await ctx.send('A' + 'H'*309)
-
-@bot.command()
-async def zomer(ctx):
-    await ctx.send('https://cdn.weeb.sh/images/rJ4E1ep7f.gif')
 
 @bot.command()
 async def heart(ctx, emoji):
