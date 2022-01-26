@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 import random
-import time
 
 bot = commands.Bot(command_prefix='=', help_command=None)
 embed_colour = discord.Colour.from_rgb(117, 211, 240)
@@ -66,32 +65,8 @@ async def on_message(message):
         else:
             await message.channel.send("i don't have enough characters for this shit " + "<:void:935298651780161576>")
 
-    if "gub" in message.content.lower() and "=heart" not in message.content:
-
-        sentence = message.content.lower()
-        gub = "gub"
-        count = 0
-
-        for i in range(len(sentence)-2):
-            if sentence[i] == 'g':
-                word = ""
-                for k in range(3):
-                    word = word + sentence[i+k]
-                if word == gub:
-                    count = count + 1
-
-        await message.channel.send("gub "*count)
-
     if "cope" in message.content.lower():
-        await message.channel.send("don't care + didn't ask + cry about it + stay mad + get real + L + mald seethe cope harder + hoes mad + basic + skill issue + ratio + you fell off + the audacity + triggered + any askers + redpilled + get a life + ok and? + cringe + touch grass + donowalled + not based + your're a (insert stereotype) + not funny didn't laugh + you're* + grammar issue + go outside + get good + reported + ad hominem + GG! + ur mom + cope")
-        time.sleep(1.8)
-        await message.channel.send("+ bluepilled")
-        time.sleep(0.4)
-        await message.channel.send("+ strawman")
-        time.sleep(0.2)
-        await message.channel.send("+ slippery slope")
-        time.sleep(0.08)
-        await message.channel.send("+ gamblers fallacy")
+        await message.channel.send("don't care + didn't ask + cry about it + stay mad + get real + L + mald seethe cope harder + hoes mad + basic + skill issue + ratio + you fell off + the audacity + triggered + any askers + redpilled + get a life + ok and? + cringe + touch grass + donowalled + not based + your're a (insert stereotype) + not funny didn't laugh + you're* + grammar issue + go outside + get good + reported + ad hominem + GG! + ur mom + cope + bluepilled + strawman + slippery slope + gamblers fallacy")
 
     if "honk" in message.content.lower() or "honque" in message.content.lower():
         await message.channel.send(random.choice(honk_gifs))
@@ -232,5 +207,5 @@ async def cock(ctx, emoji):
 @bot.command()
 async def text(ctx):
     await ctx.send(file=discord.File('images/text.jpg'))
-                
+
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
