@@ -229,4 +229,8 @@ async def cock(ctx, emoji):
                 await ctx.send(embed=dick_3)
                 break
 
+@bot.command()
+async def text(ctx):
+    await ctx.send(file=discord.File('images/text.jpg'))
+                
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
