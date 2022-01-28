@@ -31,10 +31,6 @@ honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-1623
              "https://tenor.com/view/goose-greylag-greylag-goose-fly-chase-gif-17035526", 
              "https://tenor.com/view/march-forth-spring-funny-animals-geese-spring-time-gif-13640219"]
 
-puggi_pics = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
-
-mommy_nicole = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-
 @bot.event
 async def on_ready():
 
@@ -80,10 +76,10 @@ async def on_message(message):
         await message.channel.send("interview selections complete")
 
     if "puggi" in message.content.lower() or '695356435168493598' in message.content:
-        await message.channel.send(file=discord.File('images/puggi/' + str(random.choice(puggi_pics)) + '.jpg'))
+        await message.channel.send(file=discord.File('images/puggi/' + str(random.randint(1, 27)) + '.jpg'))
 
     if "nicole" in message.content.lower().replace("=nicole", "") or '807095862747856897' in message.content:
-        await message.channel.send(file=discord.File('images/mommy/' + str(random.choice(mommy_nicole)) + '.png'))
+        await message.channel.send(file=discord.File('images/mommy/' + str(random.randint(1, 11)) + '.png'))
 
     await bot.process_commands(message)
 
