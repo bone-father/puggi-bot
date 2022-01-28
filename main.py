@@ -33,6 +33,8 @@ honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-1623
 
 puggi_pics = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
 
+mommy_nicole = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
 @bot.event
 async def on_ready():
 
@@ -80,22 +82,33 @@ async def on_message(message):
     if "puggi" in message.content.lower() or '695356435168493598' in message.content:
         await message.channel.send(file=discord.File('images/puggi/' + str(random.choice(puggi_pics)) + '.jpg'))
 
+    if "nicole" in message.content.lower() or '807095862747856897' in message.content:
+        await message.channel.send(file=discord.File('images/mommy/' + str(random.choice(mommy_nicole)) + '.png'))
+
     await bot.process_commands(message)
 
 @bot.command()
 async def help(ctx):
-    help = discord.Embed(
-        title = "cum",
-        description = "prefix is '='",
-        colour = embed_colour
-    )
+
 
     if ctx.guild.id == 826111461734219787:
+
+        help = discord.Embed(
+            title = "cum",
+            description = "prefix is '='\n\napart from commands, bot also responds to \"coop\", \"cope\", \"honk\"/\"honque\", \"nicole\", and \"puggi\"",
+            colour = embed_colour
+        )
 
         help.add_field(name="people commands", value="bohdan\npogman\nsyed\nwendy\nxander\nzach", inline=True)
         help.add_field(name="other stuff idk", value="heart <emoji>\npat\nrate\nscream\ntext", inline=True)   
 
     else:
+
+        help = discord.Embed(
+            title = "cum",
+            description = "prefix is '='\n\napart from commands, bot also responds to \"coop\", \"cope\", \"honk\"/\"honque\", \"mitten\", \"nicole\", and \"puggi\"",
+            colour = embed_colour
+    )
 
         help.add_field(name="people commands", value="bohdan\nnicole\npogman\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
         help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\npat\nrate\nscream\ntext", inline=True)
