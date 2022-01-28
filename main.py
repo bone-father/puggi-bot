@@ -31,6 +31,8 @@ honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-1623
              "https://tenor.com/view/goose-greylag-greylag-goose-fly-chase-gif-17035526", 
              "https://tenor.com/view/march-forth-spring-funny-animals-geese-spring-time-gif-13640219"]
 
+puggi_pics = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Porn"))
@@ -84,7 +86,7 @@ async def help(ctx):
         colour = embed_colour
     )
 
-    help.add_field(name="people commands", value="bohdan\nlucas\nnicole\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
+    help.add_field(name="people commands", value="bohdan\nnicole\npuggi\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
     help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\npat\nrate\nscream\ntext", inline=True)
     help.set_footer(text="lol get fucked")
     help.set_image(url="https://cdn.discordapp.com/attachments/893186562274234408/935379384116850738/monke.gif")
@@ -104,8 +106,8 @@ async def wendy(ctx):
     await ctx.send("go fuck yourself")
 
 @bot.command()
-async def lucas(ctx):
-    await ctx.send(file=discord.File('images/lucas.jpg'))
+async def puggi(ctx):
+    await ctx.send(file=discord.File('images/puggi/' + str(random.choice(puggi_pics)) + '.jpg'))
 
 @bot.command()
 async def syed(ctx):
