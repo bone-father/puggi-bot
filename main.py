@@ -89,7 +89,7 @@ async def help(ctx):
         colour = embed_colour
     )
 
-    help.add_field(name="people commands", value="bohdan\nnicole\npuggi\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
+    help.add_field(name="people commands", value="bohdan\nnicole\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
     help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\npat\nrate\nscream\ntext", inline=True)
     help.set_footer(text="lol get fucked")
     help.set_image(url="https://cdn.discordapp.com/attachments/893186562274234408/935379384116850738/monke.gif")
