@@ -90,7 +90,6 @@ async def on_message(message):
 @bot.command()
 async def help(ctx):
 
-
     if ctx.guild.id == 826111461734219787:
 
         help = discord.Embed(
@@ -237,5 +236,9 @@ async def text(ctx):
 @bot.command()
 async def pogman(ctx):
     await ctx.send("Oh hi there! I saw you at the engineering campfire last night. I just wanted to say, it's really cool to see a woman in engineering. You may already know me, but my name is pogman. Since we're already friends, you can call me poggy. Yes, I'm pretty famous around here (I'm THE owner of the ECE 26 discord server, which is the most active one if you didn't know). Do you want to be admin in there? It would be very poggers if you would.\n\nHonestly though, I'm not sure we'd get along well; I don't want \"girl\" and \"crush\" to be in my vocabulary this year lol. But yeah, DM me if you wanna hang out. I hate sexism!")
+
+@bot.command()
+async def neutralgnag(ctx):
+    await ctx.send(file=discord.File('images/neutralgnag.png'))
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
