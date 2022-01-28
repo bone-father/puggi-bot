@@ -82,7 +82,7 @@ async def on_message(message):
     if "puggi" in message.content.lower() or '695356435168493598' in message.content:
         await message.channel.send(file=discord.File('images/puggi/' + str(random.choice(puggi_pics)) + '.jpg'))
 
-    if "nicole" in message.content.lower() or '807095862747856897' in message.content:
+    if "nicole" in message.content.lower().replace("=nicole", "") or '807095862747856897' in message.content:
         await message.channel.send(file=discord.File('images/mommy/' + str(random.choice(mommy_nicole)) + '.png'))
 
     await bot.process_commands(message)
@@ -98,7 +98,7 @@ async def help(ctx):
             colour = embed_colour
         )
 
-        help.add_field(name="people commands", value="bohdan\npogman\nsyed\nwendy\nxander\nzach", inline=True)
+        help.add_field(name="people commands", value="anthony\nbohdan\npogman\nsyed\nwendy\nxander\nzach", inline=True)
         help.add_field(name="other stuff idk", value="heart <emoji>\nneutralgnag\npat\nrate\nscream\ntext", inline=True)   
 
     else:
@@ -109,7 +109,7 @@ async def help(ctx):
             colour = embed_colour
     )
 
-        help.add_field(name="people commands", value="bohdan\nnicole\npogman\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
+        help.add_field(name="people commands", value="anthony\nbohdan\nnicole\npogman\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
         help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\nneutralgnag\npat\nrate\nscream\ntext", inline=True)
 
     help.set_footer(text="lol get fucked")
@@ -240,5 +240,9 @@ async def pogman(ctx):
 @bot.command()
 async def neutralgnag(ctx):
     await ctx.send(file=discord.File('images/neutralgnag.png'))
+
+@bot.command()
+async def anthony(ctx):
+    await ctx.send(file=discord.File('images/anthony.gif'))
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
