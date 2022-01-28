@@ -76,6 +76,9 @@ async def on_message(message):
     if "coop" in message.content.lower() or "co op" in message.content.lower() or "co-op" in message.content.lower():
         await message.channel.send("interview selections complete")
 
+    if "puggi" in message.content.lower():
+        await message.channel.send(file=discord.File('images/puggi/' + str(random.choice(puggi_pics)) + '.jpg'))
+
     await bot.process_commands(message)
 
 @bot.command()
@@ -104,10 +107,6 @@ async def zach(ctx):
 @bot.command()
 async def wendy(ctx):
     await ctx.send("go fuck yourself")
-
-@bot.command()
-async def puggi(ctx):
-    await ctx.send(file=discord.File('images/puggi/' + str(random.choice(puggi_pics)) + '.jpg'))
 
 @bot.command()
 async def syed(ctx):
