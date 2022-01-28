@@ -44,7 +44,7 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    if "mitten" in message.content.lower():
+    if "mitten" in message.content.lower() and message.guild.id != 757960525241122936:
 
         sentence = message.content.lower()
         mitten = "mitten"
@@ -89,8 +89,16 @@ async def help(ctx):
         colour = embed_colour
     )
 
-    help.add_field(name="people commands", value="bohdan\nnicole\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
-    help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\npat\nrate\nscream\ntext", inline=True)
+    if ctx.guild.id != 757960525241122936:
+
+        help.add_field(name="people commands", value="bohdan\nnicole\npogman\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
+        help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\npat\nrate\nscream\ntext", inline=True)
+
+    else:
+
+        help.add_field(name="people commands", value="bohdan\npogman\nsyed\nwendy\nxander\nzach", inline=True)
+        help.add_field(name="other stuff idk", value="heart <emoji>\npat\nrate\nscream\ntext", inline=True)   
+
     help.set_footer(text="lol get fucked")
     help.set_image(url="https://cdn.discordapp.com/attachments/893186562274234408/935379384116850738/monke.gif")
 
@@ -98,7 +106,8 @@ async def help(ctx):
 
 @bot.command()
 async def nicole(ctx):
-    await ctx.send(file=discord.File('images/nicole.jpg'))
+    if ctx.guild.id != 757960525241122936:
+        await ctx.send(file=discord.File('images/nicole.jpg'))
 
 @bot.command()
 async def zach(ctx):
@@ -118,7 +127,8 @@ async def xander(ctx):
 
 @bot.command()
 async def zomer(ctx):
-    await ctx.send(file=discord.File('images/zomer.jpg'))
+    if ctx.guild.id != 757960525241122936:
+        await ctx.send(file=discord.File('images/zomer.jpg'))
 
 @bot.command()
 async def pat(ctx):
@@ -180,33 +190,38 @@ async def heart(ctx, emoji):
 
 @bot.command()
 async def cock(ctx, emoji):
-    cock = '<:x_:935311266845712384>'
-    dick = [(cock*3 + emoji*3 + cock*3 + '\n'), (cock*2 + emoji + cock + emoji + cock + emoji + cock*2 + '\n'), 
-            (cock*2 + emoji + cock*3 + emoji + cock*2 + '\n'), (cock*2 + emoji*5 + cock*2 + '\n'), 
-            (cock + emoji*2 + cock*3 + emoji*2 + cock + '\n'), (emoji + cock*7 + emoji + '\n'), 
-            (emoji + cock*3 + emoji + cock*3 + emoji + '\n'), (cock + emoji*3 + cock + emoji*3 + cock + '\n')]
-    dick_2 = dick[0] + dick[1] + dick[2] + dick[3] + dick[2]*3 + dick[4] + dick[5]*2 + dick[6] + dick[7]
-    dick_3 = discord.Embed(title = "uwu 🍆💦", description = dick_2, colour = embed_colour)
-    character_list = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()`-=~_+[]\;\',./{}|:"<>?'
-    emoji_id = emoji[-19:-1:1]
-    message_sent = False
+    if ctx.guild.id != 757960525241122936:
+        cock = '<:x_:935311266845712384>'
+        dick = [(cock*3 + emoji*3 + cock*3 + '\n'), (cock*2 + emoji + cock + emoji + cock + emoji + cock*2 + '\n'), 
+                (cock*2 + emoji + cock*3 + emoji + cock*2 + '\n'), (cock*2 + emoji*5 + cock*2 + '\n'), 
+                (cock + emoji*2 + cock*3 + emoji*2 + cock + '\n'), (emoji + cock*7 + emoji + '\n'), 
+                (emoji + cock*3 + emoji + cock*3 + emoji + '\n'), (cock + emoji*3 + cock + emoji*3 + cock + '\n')]
+        dick_2 = dick[0] + dick[1] + dick[2] + dick[3] + dick[2]*3 + dick[4] + dick[5]*2 + dick[6] + dick[7]
+        dick_3 = discord.Embed(title = "uwu 🍆💦", description = dick_2, colour = embed_colour)
+        character_list = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()`-=~_+[]\;\',./{}|:"<>?'
+        emoji_id = emoji[-19:-1:1]
+        message_sent = False
 
-    for i in ctx.guild.emojis:
-        if len(emoji_id) == 18 and emoji[0] == '<' and emoji[-1] == '>' and emoji_id in str(i):
-            await ctx.send(embed=dick_3)
-            message_sent = True
-            break
-
-    if message_sent == False:
-        for char in emoji:
-            if char in character_list:
-                break
-            else:
+        for i in ctx.guild.emojis:
+            if len(emoji_id) == 18 and emoji[0] == '<' and emoji[-1] == '>' and emoji_id in str(i):
                 await ctx.send(embed=dick_3)
+                message_sent = True
                 break
+
+        if message_sent == False:
+            for char in emoji:
+                if char in character_list:
+                    break
+                else:
+                    await ctx.send(embed=dick_3)
+                    break
 
 @bot.command()
 async def text(ctx):
     await ctx.send(file=discord.File('images/text.jpg'))
+
+@bot.command()
+async def pogman(ctx):
+    await ctx.send("Oh hi there! I saw you at the engineering campfire last night. I just wanted to say, it's really cool to see a woman in engineering. You may already know me, but my name is pogman. Since we're already friends, you can call me poggy. Yes, I'm pretty famous around here (I'm THE owner of the ECE 26 discord server, which is the most active one if you didn't know). Do you want to be admin in there? It would be very poggers if you would.\n\nHonestly though, I'm not sure we'd get along well; I don't want \"girl\" and \"crush\" to be in my vocabulary this year lol. But yeah, DM me if you wanna hang out. I hate sexism!")
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
