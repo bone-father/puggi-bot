@@ -77,7 +77,7 @@ async def on_message(message):
     if "coop" in message.content.lower() or "co op" in message.content.lower() or "co-op" in message.content.lower():
         await message.channel.send("interview selections complete")
 
-    if "puggi" in message.content.lower():
+    if "puggi" in message.content.lower() or '695356435168493598' in message.content:
         await message.channel.send(file=discord.File('images/puggi/' + str(random.choice(puggi_pics)) + '.jpg'))
 
     await bot.process_commands(message)
