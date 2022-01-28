@@ -35,7 +35,8 @@ puggi_pics = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Porn"))
+
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="You All Fail ECE"))
     print('We have logged in as {0.user}'.format(bot))
 
 @bot.event
@@ -89,15 +90,15 @@ async def help(ctx):
         colour = embed_colour
     )
 
-    if ctx.guild.id != 826111461734219787:
-
-        help.add_field(name="people commands", value="bohdan\nnicole\npogman\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
-        help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\npat\nrate\nscream\ntext", inline=True)
-
-    else:
+    if ctx.guild.id == 826111461734219787:
 
         help.add_field(name="people commands", value="bohdan\npogman\nsyed\nwendy\nxander\nzach", inline=True)
         help.add_field(name="other stuff idk", value="heart <emoji>\npat\nrate\nscream\ntext", inline=True)   
+
+    else:
+
+        help.add_field(name="people commands", value="bohdan\nnicole\npogman\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
+        help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\npat\nrate\nscream\ntext", inline=True)
 
     help.set_footer(text="lol get fucked")
     help.set_image(url="https://cdn.discordapp.com/attachments/893186562274234408/935379384116850738/monke.gif")
