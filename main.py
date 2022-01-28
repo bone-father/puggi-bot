@@ -44,7 +44,7 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    if "mitten" in message.content.lower() and message.guild.id != 757960525241122936:
+    if "mitten" in message.content.lower() and message.guild.id != 826111461734219787:
 
         sentence = message.content.lower()
         mitten = "mitten"
@@ -89,7 +89,7 @@ async def help(ctx):
         colour = embed_colour
     )
 
-    if ctx.guild.id != 757960525241122936:
+    if ctx.guild.id != 826111461734219787:
 
         help.add_field(name="people commands", value="bohdan\nnicole\npogman\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
         help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\npat\nrate\nscream\ntext", inline=True)
@@ -106,7 +106,7 @@ async def help(ctx):
 
 @bot.command()
 async def nicole(ctx):
-    if ctx.guild.id != 757960525241122936:
+    if ctx.guild.id != 826111461734219787:
         await ctx.send(file=discord.File('images/nicole.jpg'))
 
 @bot.command()
@@ -127,7 +127,7 @@ async def xander(ctx):
 
 @bot.command()
 async def zomer(ctx):
-    if ctx.guild.id != 757960525241122936:
+    if ctx.guild.id != 826111461734219787:
         await ctx.send(file=discord.File('images/zomer.jpg'))
 
 @bot.command()
@@ -190,7 +190,7 @@ async def heart(ctx, emoji):
 
 @bot.command()
 async def cock(ctx, emoji):
-    if ctx.guild.id != 757960525241122936:
+    if ctx.guild.id != 826111461734219787:
         cock = '<:x_:935311266845712384>'
         dick = [(cock*3 + emoji*3 + cock*3 + '\n'), (cock*2 + emoji + cock + emoji + cock + emoji + cock*2 + '\n'), 
                 (cock*2 + emoji + cock*3 + emoji + cock*2 + '\n'), (cock*2 + emoji*5 + cock*2 + '\n'), 
