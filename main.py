@@ -157,7 +157,7 @@ async def rate(ctx):
 
 @bot.command()
 async def scream(ctx):
-    await ctx.send('A' + 'H'*309)
+    await ctx.send('A' + 'H'*805)
 
 @bot.command()
 async def heart(ctx, emoji):
