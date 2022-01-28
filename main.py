@@ -99,7 +99,7 @@ async def help(ctx):
         )
 
         help.add_field(name="people commands", value="bohdan\npogman\nsyed\nwendy\nxander\nzach", inline=True)
-        help.add_field(name="other stuff idk", value="heart <emoji>\npat\nrate\nscream\ntext", inline=True)   
+        help.add_field(name="other stuff idk", value="heart <emoji>\nneutralgnag\npat\nrate\nscream\ntext", inline=True)   
 
     else:
 
@@ -110,7 +110,7 @@ async def help(ctx):
     )
 
         help.add_field(name="people commands", value="bohdan\nnicole\npogman\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
-        help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\npat\nrate\nscream\ntext", inline=True)
+        help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\nneutralgnag\npat\nrate\nscream\ntext", inline=True)
 
     help.set_footer(text="lol get fucked")
     help.set_image(url="https://cdn.discordapp.com/attachments/893186562274234408/935379384116850738/monke.gif")
