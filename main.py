@@ -241,4 +241,8 @@ async def neutralgnag(ctx):
 async def anthony(ctx):
     await ctx.send(file=discord.File('images/anthony.gif'))
 
+@bot.command()
+async def will(ctx):
+    await ctx.send(file=discord.File('images/will.jpg'))
+
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
