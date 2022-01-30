@@ -117,7 +117,7 @@ async def help(ctx):
     await ctx.send(embed=help)
 
 @bot.command()
-async def nick(ctx, new_nick):
+async def nick(ctx, *, new_nick):
     if ctx.message.author.id == 700092415910084608:
         member = ctx.guild.get_member(934356062486802452)
         if new_nick.lower() == "reset":
