@@ -158,7 +158,7 @@ async def syed(ctx):
 
 @bot.command()
 async def xander(ctx):
-    await ctx.send(file=discord.File('images/xander.jpg'))
+    await ctx.send(file=discord.File('images/xander.png'))
 
 @bot.command()
 async def zomer(ctx):
