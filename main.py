@@ -2,7 +2,10 @@ import discord
 from discord.ext import commands
 import random
 
-bot = commands.Bot(command_prefix='=', help_command=None)
+intents = discord.Intents.default()
+intents.members = True
+
+bot = commands.Bot(command_prefix='=', help_command=None, intents=intents)
 embed_colour = discord.Colour.from_rgb(117, 211, 240)
 
 honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-16237480", 
@@ -112,6 +115,15 @@ async def help(ctx):
     help.set_image(url="https://cdn.discordapp.com/attachments/893186562274234408/935379384116850738/monke.gif")
 
     await ctx.send(embed=help)
+
+@bot.command()
+async def nick(ctx, new_nick):
+    if ctx.message.author.id == 700092415910084608:
+        member = ctx.guild.get_member(935310030612336742)
+        print(member)
+        await member.edit(nick=new_nick)
+    else:
+        await ctx.send("uwu only my daddy can do that")
 
 @bot.command()
 async def nicole(ctx):
