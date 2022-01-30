@@ -128,6 +128,18 @@ async def nick(ctx, new_nick):
         await ctx.send("uwu only my daddy can do that")
 
 @bot.command()
+async def status(ctx, type, *, new_name):
+    if ctx.message.author.id == 700092415910084608:
+        if type.lower() == "playing":
+            await bot.change_presence(activity=discord.Game(name=new_name))
+        elif type.lower() == "listening":
+            await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=new_name))
+        elif type.lower() == "watching":
+            await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=new_name))
+    else:
+        await ctx.send("uwu only my daddy can do that")
+
+@bot.command()
 async def nicole(ctx):
     if ctx.guild.id != 826111461734219787:
         await ctx.send(file=discord.File('images/nicole.jpg'))
