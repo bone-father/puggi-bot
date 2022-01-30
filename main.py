@@ -94,7 +94,7 @@ async def help(ctx):
             colour = embed_colour
         )
 
-        help.add_field(name="people commands", value="anthony\nbohdan\nelena\npogman\nsyed\nwendy\nwill\nxander\nzach", inline=True)
+        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\npogman\nsyed\nwendy\nxander\nzach", inline=True)
         help.add_field(name="other stuff idk", value="heart <emoji>\nneutralgnag\npat\nrate\nscream\ntext", inline=True)   
 
     else:
@@ -105,7 +105,7 @@ async def help(ctx):
             colour = embed_colour
     )
 
-        help.add_field(name="people commands", value="anthony\nbohdan\nelena\nnicole\npogman\nsyed\nwendy\nwill\nxander\nzach\nzomer", inline=True)
+        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nnicole\npogman\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
         help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\nneutralgnag\npat\nrate\nscream\ntext", inline=True)
 
     help.set_footer(text="lol get fucked")
@@ -242,7 +242,7 @@ async def anthony(ctx):
     await ctx.send(file=discord.File('images/anthony.gif'))
 
 @bot.command()
-async def will(ctx):
+async def gub(ctx):
     await ctx.send(file=discord.File('images/will.jpg'))
 
 @bot.command()
