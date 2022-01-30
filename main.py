@@ -119,7 +119,7 @@ async def help(ctx):
 @bot.command()
 async def nick(ctx, new_nick):
     if ctx.message.author.id == 700092415910084608:
-        member = ctx.guild.get_member(935310030612336742)
+        member = ctx.guild.get_member(934356062486802452)
         print(member)
         await member.edit(nick=new_nick)
     else:
