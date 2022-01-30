@@ -37,8 +37,23 @@ honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-1623
 @bot.event
 async def on_ready():
 
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="You All Fail ECE"))
     print('We have logged in as {0.user}'.format(bot))
+
+    f = open("status.txt", "r")
+    type = f.readline()
+    name = f.readline()
+    f.close()
+
+    type = type.strip()
+
+    if type == "playing":
+        await bot.change_presence(activity=discord.Game(name=name))
+    elif type == "listening":
+        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=name))
+    elif type == "watching":
+        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=name))
+
+    print(type + name)
 
 @bot.event
 async def on_message(message):
@@ -136,6 +151,11 @@ async def status(ctx, type, *, new_name):
             await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=new_name))
         elif type.lower() == "watching":
             await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=new_name))
+
+        f = open("status.txt", "w")
+        f.write(type + '\n' + new_name)
+        f.close()
+
     else:
         await ctx.send("uwu only my daddy can do that")
 
