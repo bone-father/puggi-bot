@@ -53,7 +53,7 @@ async def on_ready():
     elif type == "watching":
         await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=name))
 
-    print(type + name)
+    print(type.capitalize() + ' ' + name)
 
 @bot.event
 async def on_message(message):
