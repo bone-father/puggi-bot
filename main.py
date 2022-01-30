@@ -120,8 +120,10 @@ async def help(ctx):
 async def nick(ctx, new_nick):
     if ctx.message.author.id == 700092415910084608:
         member = ctx.guild.get_member(934356062486802452)
-        print(member)
-        await member.edit(nick=new_nick)
+        if new_nick.lower() == "reset":
+            await member.edit(nick="")
+        else:
+            await member.edit(nick=new_nick)
     else:
         await ctx.send("uwu only my daddy can do that")
 
