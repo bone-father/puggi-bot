@@ -104,7 +104,7 @@ async def help(ctx):
         )
 
         help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\npogman\nsyed\nwendy\nxander\nzach", inline=True)
-        help.add_field(name="other stuff idk", value="heart <emoji>\nneutralgnag\npat\nrate\nscream\ntext", inline=True)   
+        help.add_field(name="other stuff idk", value="heart <emoji>\nleetcode\nneutralgnag\npat\nrate\nscream\ntext", inline=True)   
 
     else:
 
@@ -115,7 +115,7 @@ async def help(ctx):
     )
 
         help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\nnicole\npogman\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
-        help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\nneutralgnag\npat\nrate\nscream\ntext", inline=True)
+        help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\nleetcode\nneutralgnag\npat\nrate\nscream\ntext", inline=True)
 
     help.set_footer(text="lol get fucked")
     help.set_image(url="https://cdn.discordapp.com/attachments/893186562274234408/935379384116850738/monke.gif")
@@ -284,5 +284,9 @@ async def elena(ctx):
 @bot.command()
 async def ibrahim(ctx):
     await ctx.send('Mmmmmmm 🍝💯 suckies bigg honkies 🤪 mommy 👱 milky 🍼🍆💦 yum 😋 yum 😋 suckles 🙃 ferociously 🔥🍆 I 👁 love 😍 mommy 👩 milky 🥛 yum 😋 yum 💦👅 creamy 👑💯💦 goodness 👌 pees 💦 pants 👖 oh 🙀 no 🚫🛑😤 biggy mommy 👱 pls 🙏 wipy me peepee 🤢🍆 shits 👉💩 in jeans 👖 oh 🙀 mommy 👩 pls 🙏 I 👁 made 👉 a stinky 🤢 ooopsy poopsy wipey. Momma 🙅💅 momma 🤰 biggy mommy 👱 Bobbie mommy 👱 milk 🍼 squirt 💦 in mouth 👄💧 while cleaning 🛁 poopoo 😂 oh 😬🤭😳 mommy 👩 thankie for stanky 🦠 cleanie.')
+
+@bot.command()
+async def leetcode(ctx):
+    await ctx.send('So a girl, who I will not name, agreed to the Leetcode meetup (date). We first have dinner (not dino nuggies believe it or not); some gnocchi I cooked up for her with grape tomatoes. She loved it, "exquisite cooking", she says. We then watch youtube (algoexpert leetcode interviews) in her living room. After some time passes and we learn about advanced data structures, she suddenly asks if I would like to go up to her room with her. Finally! the moment I\'ve been waiting for! I get up to her room and sit on her bed as she swiftly makes a trip to the washroom. I boot up Leetcode with my templates ready on both our computers while I await her arrival. After scrolling, I find a perfect problem to really test our skills, "reverse a binary tree". To my avail, she returns with no clothes on! I jump at the sight of such an unexpected event, and dart out of her room. I am forever shaken by this moment. Never going on a Leetcode date again in person; strictly online measures from here on out.')
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
