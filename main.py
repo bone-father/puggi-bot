@@ -103,7 +103,7 @@ async def help(ctx):
             colour = embed_colour
         )
 
-        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\npogman\nsyed\nwendy\nxander\nzach", inline=True)
+        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\npogman\nsyed\nwendy\nxander\nzach", inline=True)
         help.add_field(name="other stuff idk", value="heart <emoji>\nneutralgnag\npat\nrate\nscream\ntext", inline=True)   
 
     else:
@@ -114,7 +114,7 @@ async def help(ctx):
             colour = embed_colour
     )
 
-        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nnicole\npogman\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
+        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\nnicole\npogman\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
         help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\nneutralgnag\npat\nrate\nscream\ntext", inline=True)
 
     help.set_footer(text="lol get fucked")
@@ -280,5 +280,9 @@ async def gub(ctx):
 @bot.command()
 async def elena(ctx):
     await ctx.send('https://tenor.com/view/ant-gif-24107201')
+
+@bot.command()
+async def ibrahim(ctx):
+    await ctx.send('Mmmmmmm suckies bigg honkies mommy milky yum yum suckles ferociously I love mommy milky yum yum creamy goodness pees pants oh no biggy mommy pls wipy me peepee shits in jeans oh mommy pls I made a stinky ooopsy poopsy wipey. Momma momma biggy mommy Bobbie mommy milk squirt in mouth while cleaning poopoo oh mommy thankie for stanky cleanie.')
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
