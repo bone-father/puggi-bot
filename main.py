@@ -283,6 +283,6 @@ async def elena(ctx):
 
 @bot.command()
 async def ibrahim(ctx):
-    await ctx.send('Mmmmmmm suckies bigg honkies mommy milky yum yum suckles ferociously I love mommy milky yum yum creamy goodness pees pants oh no biggy mommy pls wipy me peepee shits in jeans oh mommy pls I made a stinky ooopsy poopsy wipey. Momma momma biggy mommy Bobbie mommy milk squirt in mouth while cleaning poopoo oh mommy thankie for stanky cleanie.')
+    await ctx.send('Mmmmmmm 🍝💯 suckies bigg honkies 🤪 mommy 👱 milky 🍼🍆💦 yum 😋 yum 😋 suckles 🙃 ferociously 🔥🍆 I 👁 love 😍 mommy 👩 milky 🥛 yum 😋 yum 💦👅 creamy 👑💯💦 goodness 👌 pees 💦 pants 👖 oh 🙀 no 🚫🛑😤 biggy mommy 👱 pls 🙏 wipy me peepee 🤢🍆 shits 👉💩 in jeans 👖 oh 🙀 mommy 👩 pls 🙏 I 👁 made 👉 a stinky 🤢 ooopsy poopsy wipey. Momma 🙅💅 momma 🤰 biggy mommy 👱 Bobbie mommy 👱 milk 🍼 squirt 💦 in mouth 👄💧 while cleaning 🛁 poopoo 😂 oh 😬🤭😳 mommy 👩 thankie for stanky 🦠 cleanie.')
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A._FoadnBB34yHvk4vL6Xrvtwqs9U')
