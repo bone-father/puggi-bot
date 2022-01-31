@@ -82,7 +82,7 @@ async def on_message(message):
         await message.channel.send(file=discord.File('images/puggi/' + str(random.randint(1, 28)) + '.jpg'))
 
     if "nicole" in message.content.lower().replace("=nicole", "") or '807095862747856897' in message.content:
-        await message.channel.send(file=discord.File('images/mommy/' + str(random.randint(1, 11)) + '.png'))
+        await message.channel.send(file=discord.File('images/mommy/' + str(random.randint(1, 12)) + '.png'))
 
     await bot.process_commands(message)
 
