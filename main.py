@@ -81,14 +81,8 @@ async def on_message(message):
     if "puggi" in message.content.lower() or '695356435168493598' in message.content:
         await message.channel.send(file=discord.File('images/puggi/' + str(random.randint(1, 28)) + '.jpg'))
 
-    # if "nicole" in message.content.lower().replace("=nicole", "") or '807095862747856897' in message.content:
-    #     await message.channel.send(file=discord.File('images/mommy/' + str(random.randint(1, 12)) + '.png'))
-
-    if "nicole" in message.content.lower().replace("=nicole", "") or "n*cole" in message.content.lower() or '807095862747856897' in message.content:
-        if message.author.id == 749780891793883226:
-            await message.channel.send(file=discord.File('images/mommy/1.png'))
-        else:
-            await message.channel.send(file=discord.File('images/mommy/' + str(random.randint(1, 12)) + '.png'))
+    if "nicole" in message.content.lower().replace("=nicole", "") or '807095862747856897' in message.content:
+        await message.channel.send(file=discord.File('images/mommy/' + str(random.randint(1, 13)) + '.png'))
 
     await bot.process_commands(message)
 
