@@ -7,7 +7,7 @@ intents.members = True
 
 bot = commands.Bot(command_prefix='=', help_command=None, intents=intents, 
                    activity=discord.Activity(type=discord.ActivityType.watching, name="You All Fail ECE"))
-                   
+
 embed_colour = discord.Colour.from_rgb(117, 211, 240)
 
 honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-16237480", 
@@ -47,6 +47,10 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
+    mommy = random.randint(1, 100)
+    if mommy == 69:
+        await message.channel.send(file=discord.File('images/mommy milkers.png'))
+
     if "mitten" in message.content.lower() and message.guild.id != 826111461734219787:
 
         sentence = message.content.lower()
@@ -80,7 +84,7 @@ async def on_message(message):
         await message.channel.send("interview selections complete")
 
     if "puggi" in message.content.lower() or '695356435168493598' in message.content:
-        await message.channel.send(file=discord.File('images/puggi/' + str(random.randint(1, 28)) + '.jpg'))
+        await message.channel.send(file=discord.File('images/puggi/' + str(random.randint(1, 29)) + '.jpg'))
 
     if "nicole" in message.content.lower().replace("=nicole", "") or '807095862747856897' in message.content:
         await message.channel.send(file=discord.File('images/mommy/' + str(random.randint(1, 13)) + '.png'))
