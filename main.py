@@ -5,7 +5,9 @@ import random
 intents = discord.Intents.default()
 intents.members = True
 
-bot = commands.Bot(command_prefix='=', help_command=None, intents=intents)
+bot = commands.Bot(command_prefix='=', help_command=None, intents=intents, 
+                   activity=discord.Activity(type=discord.ActivityType.watching, name="You All Fail ECE"))
+                   
 embed_colour = discord.Colour.from_rgb(117, 211, 240)
 
 honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-16237480", 
@@ -38,7 +40,6 @@ honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-1623
 async def on_ready():
 
     print('We have logged in as {0.user}'.format(bot))
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="You All Fail ECE"))
 
 @bot.event
 async def on_message(message):
