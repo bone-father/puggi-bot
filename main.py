@@ -47,7 +47,7 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    mommy = random.randint(1, 100)
+    mommy = random.randint(1, 69)
     await bot.get_channel(938249020088922152).send(mommy)
     
     if mommy == 69:
