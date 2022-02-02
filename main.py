@@ -198,10 +198,11 @@ async def heart(ctx, emoji):
     heart_3 = discord.Embed(title = "uwu <3", description = heart_2, colour = embed_colour)
     character_list = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()`-=~_+[]\;\',./{}|:"<>?'
     emoji_id = emoji[-19:-1:1]
+    emoji_name = emoji[1:len(emoji)-20:1].strip(":")
     message_sent = False
 
     for i in ctx.guild.emojis:
-        if len(emoji_id) == 18 and emoji[0] == '<' and emoji[-1] == '>' and emoji_id in str(i):
+        if emoji_id in str(i) and emoji_name in str(i) and len(emoji_id) == 18 and emoji[0] == '<' and emoji[-1] == '>' and len(emoji_name) > 1:
             await ctx.send(embed=heart_3)
             message_sent = True
             break
@@ -242,10 +243,11 @@ async def cock(ctx, emoji):
         dick_3 = discord.Embed(title = "uwu 🍆💦", description = dick_2, colour = embed_colour)
         character_list = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()`-=~_+[]\;\',./{}|:"<>?'
         emoji_id = emoji[-19:-1:1]
+        emoji_name = emoji[1:len(emoji)-20:1].strip(":")
         message_sent = False
 
         for i in ctx.guild.emojis:
-            if len(emoji_id) == 18 and emoji[0] == '<' and emoji[-1] == '>' and emoji_id in str(i):
+            if emoji_id in str(i) and emoji_name in str(i) and len(emoji_id) == 18 and emoji[0] == '<' and emoji[-1] == '>' and len(emoji_name) > 1:
                 await ctx.send(embed=dick_3)
                 message_sent = True
                 break
