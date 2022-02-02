@@ -91,6 +91,9 @@ async def on_message(message):
     if "nicole" in message.content.lower().replace("=nicole", "") or '807095862747856897' in message.content:
         await message.channel.send(file=discord.File('images/mommy/' + str(random.randint(1, 13)) + '.png'))
 
+    if "pogman" in message.content.lower():
+            await message.channel.send("Oh hi there! I saw you at the engineering campfire last night. I just wanted to say, it's really cool to see a woman in engineering. You may already know me, but my name is pogman. Since we're already friends, you can call me poggy. Yes, I'm pretty famous around here (I'm THE owner of the ECE 26 discord server, which is the most active one if you didn't know). Do you want to be admin in there? It would be very poggers if you would.\n\nHonestly though, I'm not sure we'd get along well; I don't want \"girl\" and \"crush\" to be in my vocabulary this year lol. But yeah, DM me if you wanna hang out. I hate sexism!")
+
     await bot.process_commands(message)
 
 @bot.command()
@@ -100,22 +103,22 @@ async def help(ctx):
 
         help = discord.Embed(
             title = "cum",
-            description = "prefix is '='\n\napart from commands, bot also responds to \"coop\", \"cope\", \"honk\"/\"honque\", \"nicole\", and \"puggi\"",
+            description = "prefix is '='\n\napart from commands, bot also responds to \"coop\", \"cope\", \"honk\"/\"honque\", \"nicole\", \"pogman\", and \"puggi\"",
             colour = embed_colour
         )
 
-        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\npogman\nsyed\nwendy\nxander\nzach", inline=True)
+        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\nsyed\nwendy\nxander\nzach", inline=True)
         help.add_field(name="other stuff idk", value="heart <emoji>\nleetcode\nneutralgnag\npat\nrate\nscream\ntext", inline=True)   
 
     else:
 
         help = discord.Embed(
             title = "cum",
-            description = "prefix is '='\n\napart from commands, bot also responds to \"coop\", \"cope\", \"honk\"/\"honque\", \"mitten\", \"nicole\", and \"puggi\"",
+            description = "prefix is '='\n\napart from commands, bot also responds to \"coop\", \"cope\", \"honk\"/\"honque\", \"mitten\", \"nicole\", \"pogman\", and \"puggi\"",
             colour = embed_colour
     )
 
-        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\nnicole\npogman\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
+        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\nnicole\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
         help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\nleetcode\nneutralgnag\npat\nrate\nscream\ntext", inline=True)
 
     help.set_footer(text="lol get fucked")
@@ -263,10 +266,6 @@ async def cock(ctx, emoji):
 @bot.command()
 async def text(ctx):
     await ctx.send(file=discord.File('images/text.jpg'))
-
-@bot.command()
-async def pogman(ctx):
-    await ctx.send("Oh hi there! I saw you at the engineering campfire last night. I just wanted to say, it's really cool to see a woman in engineering. You may already know me, but my name is pogman. Since we're already friends, you can call me poggy. Yes, I'm pretty famous around here (I'm THE owner of the ECE 26 discord server, which is the most active one if you didn't know). Do you want to be admin in there? It would be very poggers if you would.\n\nHonestly though, I'm not sure we'd get along well; I don't want \"girl\" and \"crush\" to be in my vocabulary this year lol. But yeah, DM me if you wanna hang out. I hate sexism!")
 
 @bot.command()
 async def neutralgnag(ctx):
