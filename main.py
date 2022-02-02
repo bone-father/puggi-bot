@@ -48,7 +48,7 @@ async def on_message(message):
         return
 
     mommy = random.randint(1, 100)
-    await bot.get_channel(938245461108723742).send(mommy)
+    await bot.get_channel(938249020088922152).send(mommy)
     
     if mommy == 69:
         await message.channel.send(file=discord.File('images/mommy milkers.png'))
