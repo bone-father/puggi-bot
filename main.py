@@ -48,10 +48,9 @@ async def on_message(message):
         return
 
     mommy = random.randint(1, 100)
-    await bot.get_channel(938249020088922152).send(mommy)
-    
+
     if mommy == 69:
-        await bot.get_channel(938249020088922152).send("<@700092415910084608>")
+        await bot.get_channel(938249020088922152).send(mommy + " <@700092415910084608>")
         await message.channel.send(file=discord.File('images/mommy milkers.png'))
 
     if "mitten" in message.content.lower() and message.guild.id != 826111461734219787:
