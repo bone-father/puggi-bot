@@ -83,16 +83,13 @@ async def on_message(message):
         await message.channel.send(random.choice(honk_gifs))
 
     if "coop" in message.content.lower() or "co op" in message.content.lower() or "co-op" in message.content.lower():
-        await message.channel.send("Not Ranked")
+        await message.channel.send("interview selections complete")
 
     if "puggi" in message.content.lower() or '695356435168493598' in message.content:
         await message.channel.send(file=discord.File('images/puggi/' + str(random.randint(1, 33)) + '.jpg'))
 
     if "nicole" in message.content.lower().replace("=nicole", "") or '807095862747856897' in message.content:
         await message.channel.send(file=discord.File('images/mommy/' + str(random.randint(1, 19)) + '.png'))
-
-    if "pogman" in message.content.lower() or '236262748122513408' in message.content: 
-        await message.channel.send("Oh hi there! I saw you at the engineering campfire last night. I just wanted to say, it's really cool to see a woman in engineering. You may already know me, but my name is pogman. Since we're already friends, you can call me poggy. Yes, I'm pretty famous around here (I'm THE owner of the ECE 26 discord server, which is the most active one if you didn't know). Do you want to be admin in there? It would be very poggers if you would.\n\nHonestly though, I'm not sure we'd get along well; I don't want \"girl\" and \"crush\" to be in my vocabulary this year lol. But yeah, DM me if you wanna hang out. I hate sexism!")
 
     await bot.process_commands(message)
 
@@ -290,5 +287,9 @@ async def ibrahim(ctx):
 @bot.command()
 async def leetcode(ctx):
     await ctx.send('So a girl, who I will not name, agreed to the Leetcode meetup (date). We first have dinner (not dino nuggies believe it or not); some gnocchi I cooked up for her with grape tomatoes. She loved it, "exquisite cooking", she says. We then watch youtube (algoexpert leetcode interviews) in her living room. After some time passes and we learn about advanced data structures, she suddenly asks if I would like to go up to her room with her. Finally! the moment I\'ve been waiting for! I get up to her room and sit on her bed as she swiftly makes a trip to the washroom. I boot up Leetcode with my templates ready on both our computers while I await her arrival. After scrolling, I find a perfect problem to really test our skills, "reverse a binary tree". To my avail, she returns with no clothes on! I jump at the sight of such an unexpected event, and dart out of her room. I am forever shaken by this moment. Never going on a Leetcode date again in person; strictly online measures from here on out.')
+
+@bot.command()
+async def pogman(ctx):
+    await ctx.send("Oh hi there! I saw you at the engineering campfire last night. I just wanted to say, it's really cool to see a woman in engineering. You may already know me, but my name is pogman. Since we're already friends, you can call me poggy. Yes, I'm pretty famous around here (I'm THE owner of the ECE 26 discord server, which is the most active one if you didn't know). Do you want to be admin in there? It would be very poggers if you would.\n\nHonestly though, I'm not sure we'd get along well; I don't want \"girl\" and \"crush\" to be in my vocabulary this year lol. But yeah, DM me if you wanna hang out. I hate sexism!")
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A.OOR4_ynajm5ZSgzLY1L3IJWlzBY')
