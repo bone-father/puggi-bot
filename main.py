@@ -100,11 +100,11 @@ async def help(ctx):
 
         help = discord.Embed(
             title = "cum",
-            description = "prefix is '='\n\napart from commands, bot also responds to \"coop\", \"cope\", \"honk\"/\"honque\", \"nicole\", \"pogman\", and \"puggi\"",
+            description = "prefix is '='\n\napart from commands, bot also responds to \"coop\", \"cope\", \"honk\"/\"honque\", \"nicole\", and \"puggi\"",
             colour = embed_colour
         )
 
-        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\nsyed\nwendy\nxander\nzach", inline=True)
+        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\npogman\nsyed\nwendy\nxander\nzach", inline=True)
         help.add_field(name="other stuff idk", value="heart <emoji>\nleetcode\nneutralgnag\npat\nrate\nscream\ntext", inline=True)   
 
     else:
@@ -115,7 +115,7 @@ async def help(ctx):
             colour = embed_colour
     )
 
-        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\nnicole\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
+        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\npogman\nnicole\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
         help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\nleetcode\nneutralgnag\npat\nrate\nscream\ntext", inline=True)
 
     help.set_footer(text="lol get fucked")
