@@ -111,7 +111,7 @@ async def help(ctx):
 
         help = discord.Embed(
             title = "cum",
-            description = "prefix is '='\n\napart from commands, bot also responds to \"coop\", \"cope\", \"honk\"/\"honque\", \"mitten\", \"nicole\", \"pogman\", and \"puggi\"",
+            description = "prefix is '='\n\napart from commands, bot also responds to \"coop\", \"cope\", \"honk\"/\"honque\", \"mitten\", \"nicole\", and \"puggi\"",
             colour = embed_colour
     )
 
