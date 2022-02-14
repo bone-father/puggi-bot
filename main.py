@@ -278,7 +278,7 @@ async def gub(ctx):
 
 @bot.command()
 async def elena(ctx):
-    await ctx.send('https://tenor.com/view/ant-gif-24107201')
+    await ctx.send(file=discord.File('images/elena.jpg'))
 
 @bot.command()
 async def ibrahim(ctx):
