@@ -83,7 +83,7 @@ async def on_message(message):
         await message.channel.send(random.choice(honk_gifs))
 
     if "coop" in message.content.lower() or "co op" in message.content.lower() or "co-op" in message.content.lower():
-        await message.channel.send("Not Ranked")
+        await message.channel.send("interview selections complete")
 
     if "puggi" in message.content.lower() or '695356435168493598' in message.content:
         await message.channel.send(file=discord.File('images/puggi/' + str(random.randint(1, 35)) + '.jpg'))
@@ -104,7 +104,7 @@ async def help(ctx):
             colour = embed_colour
         )
 
-        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\npogman\nsyed\nwendy\nxander\nzach", inline=True)
+        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\npogman\npug\nsyed\nwendy\nxander\nzach", inline=True)
         help.add_field(name="other stuff idk", value="heart <emoji>\nleetcode\nneutralgnag\npat\nrate\nscream\ntext", inline=True)   
 
     else:
@@ -115,7 +115,7 @@ async def help(ctx):
             colour = embed_colour
     )
 
-        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\npogman\nnicole\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
+        help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\npogman\npug\nnicole\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
         help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\nleetcode\nneutralgnag\npat\nrate\nscream\ntext", inline=True)
 
     help.set_footer(text="lol get fucked")
@@ -291,5 +291,9 @@ async def leetcode(ctx):
 @bot.command()
 async def pogman(ctx):
     await ctx.send("Oh hi there! I saw you at the engineering campfire last night. I just wanted to say, it's really cool to see a woman in engineering. You may already know me, but my name is pogman. Since we're already friends, you can call me poggy. Yes, I'm pretty famous around here (I'm THE owner of the ECE 26 discord server, which is the most active one if you didn't know). Do you want to be admin in there? It would be very poggers if you would.\n\nHonestly though, I'm not sure we'd get along well; I don't want \"girl\" and \"crush\" to be in my vocabulary this year lol. But yeah, DM me if you wanna hang out. I hate sexism!")
+
+@bot.command()
+async def pug(ctx):
+    await ctx.send(file=discord.File('images/pug/' + str(random.randint(1, 23)) + '.jpg'))
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A.OOR4_ynajm5ZSgzLY1L3IJWlzBY')
