@@ -86,7 +86,7 @@ async def on_message(message):
         await message.channel.send("interview selections complete")
 
     if "puggi" in message.content.lower() or '695356435168493598' in message.content:
-        await message.channel.send(file=discord.File('images/puggi/(' + str(random.randint(1, 193)) + ').jpg'))
+        await message.channel.send(file=discord.File('images/puggi/(' + str(random.randint(1, 198)) + ').jpg'))
 
     if "nicole" in message.content.lower().replace("=nicole", "") or '807095862747856897' in message.content:
         await message.channel.send(file=discord.File('images/mommy/(' + str(random.randint(1, 19)) + ').png'))
