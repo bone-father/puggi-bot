@@ -76,7 +76,7 @@ async def on_message(message):
         else:
             await message.channel.send("i don't have enough characters for this shit " + "<:void:935298651780161576>")
 
-    if "cope" in message.content.lower():
+    if "cope" in message.content.lower().split():
         await message.channel.send("don't care + didn't ask + cry about it + stay mad + get real + L + mald seethe cope harder + hoes mad + basic + skill issue + ratio + you fell off + the audacity + triggered + any askers + redpilled + get a life + ok and? + cringe + touch grass + donowalled + not based + your're a (insert stereotype) + not funny didn't laugh + you're* + grammar issue + go outside + get good + reported + ad hominem + GG! + ur mom + cope + bluepilled + strawman + slippery slope + gambler's fallacy")
 
     if "honk" in message.content.lower() or "honque" in message.content.lower():
