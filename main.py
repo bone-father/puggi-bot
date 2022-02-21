@@ -86,7 +86,7 @@ async def on_message(message):
         await message.channel.send("interview selections complete")
 
     if "puggi" in message.content.lower() or '695356435168493598' in message.content:
-        await message.channel.send(file=discord.File('images/puggi/(' + str(random.randint(1, 216)) + ').jpg'))
+        await message.channel.send(file=discord.File('images/puggi/(' + str(random.randint(1, 224)) + ').jpg'))
 
     if "nicole" in message.content.lower().replace("=nicole", "") or '807095862747856897' in message.content:
         await message.channel.send(file=discord.File('images/mommy/(' + str(random.randint(1, 19)) + ').png'))
@@ -294,6 +294,6 @@ async def pogman(ctx):
 
 @bot.command()
 async def pug(ctx):
-    await ctx.send(file=discord.File('images/pug/(' + str(random.randint(1, 39)) + ').jpg'))
+    await ctx.send(file=discord.File('images/pug/(' + str(random.randint(1, 40)) + ').jpg'))
 
 bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A.OOR4_ynajm5ZSgzLY1L3IJWlzBY')
