@@ -270,7 +270,7 @@ async def neutralgnag(ctx):
 
 @bot.command()
 async def anthony(ctx):
-    await ctx.send(file=discord.File('images/anthony.gif'))
+    await ctx.send(file=discord.File('images/anthony.jpg'))
 
 @bot.command()
 async def gub(ctx):
