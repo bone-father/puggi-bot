@@ -83,7 +83,7 @@ async def on_message(message):
         await message.channel.send(random.choice(honk_gifs))
 
     if "coop" in message.content.lower() or "co op" in message.content.lower() or "co-op" in message.content.lower():
-        await message.channel.send("interview selections complete")
+        await message.channel.send("Not Ranked")
 
     if "puggi" in message.content.lower() or '695356435168493598' in message.content:
         await message.channel.send(file=discord.File('images/puggi/(' + str(random.randint(1, 240)) + ').jpg'))
