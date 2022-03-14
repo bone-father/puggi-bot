@@ -91,9 +91,11 @@ async def on_message(message):
     if "nicole" in message.content.lower().replace("=nicole", "") or '807095862747856897' in message.content:
         await message.channel.send(file=discord.File('images/mommy/(' + str(random.randint(1, 19)) + ').png'))
 
-    # if bot.user.mentioned_in(message):
     if "934356062486802452" in message.content:
         await message.channel.send("wrong puggi dumbass\n\n<@!695356435168493598>")   
+
+    if "woman" in message.content.lower() or "women" in message.content.lower():
+        await message.add_reaction('\U0001FAB1')
         
     await bot.process_commands(message)
 
