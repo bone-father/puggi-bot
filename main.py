@@ -95,7 +95,7 @@ async def on_message(message):
         await message.channel.send("wrong puggi dumbass\n\n<@!695356435168493598>")   
 
     if "woman" in message.content.lower() or "women" in message.content.lower():
-        await message.add_reaction('\U0001FAB1')
+        await message.add_reaction('🪱')
         
     await bot.process_commands(message)
 
