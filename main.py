@@ -137,7 +137,7 @@ async def nick(ctx, *, new_nick):
         else:
             await ctx.guild.me.edit(nick=new_nick)
     else:
-        await ctx.send("uwu only my daddy can do that")
+        await ctx.send("uwu you can't do that")
 
 @bot.command()
 async def status(ctx, type, *, new_name):
@@ -149,7 +149,7 @@ async def status(ctx, type, *, new_name):
         elif type.lower() == "watching":
             await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=new_name))
     else:
-        await ctx.send("uwu only my daddy can do that")
+        await ctx.send("uwu you can't do that")
 
 @bot.command()
 async def nicole(ctx):
