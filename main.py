@@ -41,11 +41,6 @@ async def on_ready():
 
     print('We have logged in as {0.user}'.format(bot))
     
-    global prev_count
-    global counter_id
-    prev_count = 0
-    counter_id = 0
-    
 @bot.event
 async def on_message(message):
 
@@ -101,33 +96,6 @@ async def on_message(message):
 
     if "woman" in message.content.lower() or "women" in message.content.lower() or "worm" in message.content.lower():
         await message.add_reaction('🪱')
-        
-    global prev_count
-    global counter_id
-
-    if message.channel.id == 932522630072905748:
-
-        try:
-            count = int(message.content.split()[0])
-            if(count == prev_count + 1 and message.author.id != counter_id):
-                await message.add_reaction('✅')
-                prev_count=count
-                counter_id = message.author.id
-
-            elif(count != prev_count + 1):
-                await message.add_reaction('❌')
-                await message.channel.send("dumb fuck\n\nstart from 1 again")
-                prev_count = 0
-                counter_id = 0
-
-            elif(message.author.id == counter_id):
-                await message.add_reaction('❌')
-                await message.channel.send("dumb fuck\n\ndont count twice in a row")
-                prev_count = 0
-                counter_id = 0
-
-        except:
-            pass
 
     await bot.process_commands(message)
 
