@@ -89,7 +89,7 @@ async def on_message(message):
         await message.channel.send(file=discord.File('images/puggi/(' + str(random.randint(1, 246)) + ').jpg'))
 
     if "nicole" in message.content.lower().replace("=nicole", "") or '807095862747856897' in message.content:
-        await message.channel.send(file=discord.File('images/mommy/(' + str(random.randint(1, 19)) + ').png'))
+        await message.channel.send(file=discord.File('images/mommy/(' + str(random.randint(1, 25)) + ').png'))
 
     if "934356062486802452" in message.content:
         await message.channel.send("wrong puggi dumbass\n\n<@!695356435168493598>")   
