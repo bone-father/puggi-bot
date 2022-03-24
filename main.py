@@ -132,16 +132,15 @@ async def help(ctx):
 @bot.command()
 async def nick(ctx, *, new_nick):
     if ctx.message.author.id == 700092415910084608:
-        member = ctx.guild.get_member(935310030612336742)
         if new_nick.lower() == "reset":
-            await member.edit(nick="")
+            await ctx.guild.me.edit(nick="")
             username = str(bot.get_user(935310030612336742))
             await ctx.send("im " + username[0:len(username)-5] + " now")
         else:
             await ctx.guild.me.edit(nick=new_nick)
             await ctx.send("im " + new_nick + " now")
     else:
-        await ctx.send("uwu only my daddy can do that")
+        await ctx.send("uwu you can't do that")
 
 @bot.command()
 async def status(ctx, type, *, new_name):
