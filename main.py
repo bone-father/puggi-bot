@@ -180,7 +180,6 @@ async def status(ctx, type, *new_name):
                     await bot.change_presence(activity=discord.Game(name=new_name))
                 elif type == "listening":
                     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=new_name))
-                    type = "listening to"
                 elif type == "watching":
                     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=new_name))
                     
@@ -196,7 +195,10 @@ async def status(ctx, type, *new_name):
                 mycursor.execute("UPDATE Status SET type = %s, name = %s", (type, new_name))
                 db.commit()
 
-                await ctx.send("now " + type + " " + new_name)
+                if type == "listening":
+                    await ctx.send("now " + type + " to " + new_name)
+                else:
+                    await ctx.send("now " + type + " " + new_name)
 
             else:
                 pass
