@@ -180,6 +180,7 @@ async def status(ctx, type, *new_name):
                     await bot.change_presence(activity=discord.Game(name=new_name))
                 elif type == "listening":
                     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=new_name))
+                    type = "listening to"
                 elif type == "watching":
                     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=new_name))
                     
