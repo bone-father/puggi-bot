@@ -1,6 +1,31 @@
 import discord
 from discord.ext import commands
 import random
+import mysql.connector
+
+db = mysql.connector.connect(
+    host="us-cdbr-east-05.cleardb.net",
+    user="b338191efa915b",
+    passwd="395c9fdf",
+    database="heroku_88cf397cc54b3f7"
+)
+
+mycursor = db.cursor()
+
+mycursor.execute("SELECT type FROM Status")
+e = mycursor.fetchone()
+status_type = str(e)[2:-3]
+
+mycursor.execute("SELECT name FROM Status")
+e = mycursor.fetchone()
+status_name = str(e)[2:-3]
+
+if status_type == "playing":
+    activity=discord.Game(name=status_name)
+elif status_type == "listening":
+    activity=discord.Activity(type=discord.ActivityType.listening, name=status_name)
+elif status_type == "watching":
+    activity=discord.Activity(type=discord.ActivityType.watching, name=status_name)
 
 intents = discord.Intents.default()
 intents.members = True
@@ -40,7 +65,7 @@ honk_gifs = ["https://tenor.com/view/goose-honk-inhale-inhales-untitled-gif-1623
 async def on_ready():
 
     print('We have logged in as {0.user}'.format(bot))
-    
+
 @bot.event
 async def on_message(message):
 
@@ -82,8 +107,8 @@ async def on_message(message):
     if "honk" in message.content.lower() or "honque" in message.content.lower():
         await message.channel.send(random.choice(honk_gifs))
 
-    if "coop" in message.content.lower() or "co op" in message.content.lower() or "co-op" in message.content.lower():
-        await message.channel.send("Not Ranked")
+    # if "coop" in message.content.lower() or "co op" in message.content.lower() or "co-op" in message.content.lower():
+    #     await message.channel.send("interview selections complete")
 
     if "puggi" in message.content.lower() or '695356435168493598' in message.content:
         await message.channel.send(file=discord.File('images/puggi/(' + str(random.randint(1, 246)) + ').jpg'))
@@ -92,7 +117,7 @@ async def on_message(message):
         await message.channel.send(file=discord.File('images/mommy/(' + str(random.randint(1, 25)) + ').png'))
 
     if "934356062486802452" in message.content or "934363232175534111" in message.content or "936678441644879874" in message.content:
-        await message.channel.send("wrong puggi dumbass\n\n<@!695356435168493598>")   
+        await message.channel.send("wrong puggi dumbass\n\n<@!695356435168493598>")
 
     if "woman" in message.content.lower() or "women" in message.content.lower() or "worm" in message.content.lower():
         await message.add_reaction('🪱')
@@ -145,12 +170,21 @@ async def nick(ctx, *, new_nick):
 @bot.command()
 async def status(ctx, type, *, new_name):
     if ctx.message.author.id == 700092415910084608:
-        if type.lower() == "playing":
-            await bot.change_presence(activity=discord.Game(name=new_name))
-        elif type.lower() == "listening":
-            await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=new_name))
-        elif type.lower() == "watching":
-            await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=new_name))
+        if (len(new_name) <= 128):
+            if type == "playing":
+                await bot.change_presence(activity=discord.Game(name=new_name))
+            elif type == "listening":
+                await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=new_name))
+            elif type == "watching":
+                await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=new_name))
+
+            mycursor.execute("UPDATE Status SET type = %s, name = %s", (type, new_name))
+            db.commit()
+
+            await ctx.send("now" + type + new_name)
+
+        else:
+            await ctx.send("too long bro")
     else:
         await ctx.send("uwu you can't do that")
 
