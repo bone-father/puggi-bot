@@ -187,7 +187,7 @@ async def status(ctx, type, *new_name):
                 elif type == "watching":
                     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=new_name))
                     
-                mycursor = connect()
+                db, mycursor = connect()
 
                 mycursor.execute("UPDATE Status SET type = %s, name = %s", (type, new_name))
                 db.commit()
