@@ -179,7 +179,7 @@ async def status(ctx, type, *, new_name):
             mycursor.execute("UPDATE Status SET type = %s, name = %s", (type, new_name))
             db.commit()
 
-            await ctx.send("now" + type + new_name)
+            await ctx.send("now " + type + " " + new_name)
 
         else:
             await ctx.send("too long bro")
