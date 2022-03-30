@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import random
 import mysql.connector
+from urllib.request import urlopen
 
 def connect():
 
@@ -203,6 +204,13 @@ async def status(ctx, type, *new_name):
             await ctx.send("too long bro")
     else:
         await ctx.send("uwu you can't do that")
+
+@bot.command()
+async def pfp(ctx, url):
+    url=url
+    image = urlopen(url).read()
+    await bot.user.edit(avatar=image)
+    await ctx.send("ok")
 
 @bot.command()
 async def nicole(ctx):
