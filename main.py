@@ -30,8 +30,7 @@ elif status_type == "watching":
 intents = discord.Intents.default()
 intents.members = True
 
-bot = commands.Bot(command_prefix='=', help_command=None, intents=intents, 
-                   activity=discord.Activity(type=discord.ActivityType.watching, name="You All Fail ECE"))
+bot = commands.Bot(command_prefix='=', help_command=None, intents=intents, activity=activity)
 
 embed_colour = discord.Colour.from_rgb(117, 211, 240)
 
@@ -75,7 +74,6 @@ async def on_message(message):
     mommy = random.randint(1, 1000)
 
     if mommy == 69:
-        # await bot.get_channel(938249020088922152).send(str(mommy) + " <@!700092415910084608>")
         await message.channel.send(file=discord.File('images/mommy milkers.png'))
 
     if "mitten" in message.content.lower() and message.guild.id != 826111461734219787:
