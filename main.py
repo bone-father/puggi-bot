@@ -182,6 +182,15 @@ async def status(ctx, type, *new_name):
                     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=new_name))
                 elif type == "watching":
                     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=new_name))
+                    
+                db = mysql.connector.connect(
+                    host="us-cdbr-east-05.cleardb.net",
+                    user="b338191efa915b",
+                    passwd="395c9fdf",
+                    database="heroku_88cf397cc54b3f7"
+                )
+
+                mycursor = db.cursor()
 
                 mycursor.execute("UPDATE Status SET type = %s, name = %s", (type, new_name))
                 db.commit()
