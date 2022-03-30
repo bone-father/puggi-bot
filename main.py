@@ -207,10 +207,13 @@ async def status(ctx, type, *new_name):
 
 @bot.command()
 async def pfp(ctx, url):
-    url=url
-    image = urlopen(url).read()
-    await bot.user.edit(avatar=image)
-    await ctx.send("ok")
+    if ctx.message.author.id == 700092415910084608:
+        url=url
+        image = urlopen(url).read()
+        await bot.user.edit(avatar=image)
+        await ctx.send("ok")
+    else:
+        await ctx.send("uwu you can't do that")
 
 @bot.command()
 async def nicole(ctx):
