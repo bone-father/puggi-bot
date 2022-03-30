@@ -3,14 +3,18 @@ from discord.ext import commands
 import random
 import mysql.connector
 
-db = mysql.connector.connect(
-    host="us-cdbr-east-05.cleardb.net",
-    user="b338191efa915b",
-    passwd="395c9fdf",
-    database="heroku_88cf397cc54b3f7"
-)
+def connect():
 
-mycursor = db.cursor()
+    db = mysql.connector.connect(
+        host="us-cdbr-east-05.cleardb.net",
+        user="b338191efa915b",
+        passwd="395c9fdf",
+        database="heroku_88cf397cc54b3f7"
+    )
+
+    return(db, db.cursor())
+
+db, mycursor = connect()
 
 mycursor.execute("SELECT type FROM Status")
 e = mycursor.fetchone()
@@ -183,14 +187,7 @@ async def status(ctx, type, *new_name):
                 elif type == "watching":
                     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=new_name))
                     
-                db = mysql.connector.connect(
-                    host="us-cdbr-east-05.cleardb.net",
-                    user="b338191efa915b",
-                    passwd="395c9fdf",
-                    database="heroku_88cf397cc54b3f7"
-                )
-
-                mycursor = db.cursor()
+                mycursor = connect()
 
                 mycursor.execute("UPDATE Status SET type = %s, name = %s", (type, new_name))
                 db.commit()
