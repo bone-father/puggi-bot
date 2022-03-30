@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import random
 import mysql.connector
-from urllib.request import urlopen
+from urllib.request import Request, urlopen
 
 def connect():
 
@@ -208,8 +208,8 @@ async def status(ctx, type, *new_name):
 @bot.command()
 async def pfp(ctx, url):
     if ctx.message.author.id == 700092415910084608:
-        url=url
-        image = urlopen(url).read()
+        request = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        image = urlopen(request).read()
         await bot.user.edit(avatar=image)
         await ctx.send("ok")
     else:
