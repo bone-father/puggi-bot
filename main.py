@@ -173,18 +173,23 @@ async def status(ctx, type, *new_name):
         type = type.lower()
 
         if (len(new_name) <= 128):
-            if type == "playing":
-                await bot.change_presence(activity=discord.Game(name=new_name))
-            elif type == "listening":
-                await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=new_name))
-            elif type == "watching":
-                await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=new_name))
 
-            mycursor.execute("UPDATE Status SET type = %s, name = %s", (type, new_name))
-            db.commit()
+            if (type == "playing" or type == "listening" or type == "watching"):
 
-            await ctx.send("now " + type + " " + new_name)
+                if type == "playing":
+                    await bot.change_presence(activity=discord.Game(name=new_name))
+                elif type == "listening":
+                    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=new_name))
+                elif type == "watching":
+                    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=new_name))
 
+                mycursor.execute("UPDATE Status SET type = %s, name = %s", (type, new_name))
+                db.commit()
+
+                await ctx.send("now " + type + " " + new_name)
+
+            else:
+                pass
         else:
             await ctx.send("too long bro")
     else:
