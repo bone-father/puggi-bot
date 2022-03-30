@@ -166,7 +166,7 @@ async def nick(ctx, *, new_nick):
         await ctx.send("uwu you can't do that")
 
 @bot.command()
-async def status(ctx, type, *, new_name):
+async def status(ctx, type, *new_name):
     if ctx.message.author.id == 700092415910084608:
         new_name = " ".join(new_name)
         type = type.lower()
