@@ -168,6 +168,9 @@ async def nick(ctx, *, new_nick):
 @bot.command()
 async def status(ctx, type, *, new_name):
     if ctx.message.author.id == 700092415910084608:
+        new_name = " ".join(new_name)
+        type = type.lower()
+
         if (len(new_name) <= 128):
             if type == "playing":
                 await bot.change_presence(activity=discord.Game(name=new_name))
