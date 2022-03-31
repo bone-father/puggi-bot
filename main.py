@@ -206,7 +206,7 @@ async def status(ctx, type, *new_name):
         await ctx.send("uwu you can't do that")
 
 @bot.command()
-async def pfp(ctx, url):
+async def pfp(ctx, *url):
     if ctx.message.author.id == 700092415910084608:
         url = str(url)[2:-3]
         
