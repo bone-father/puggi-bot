@@ -147,7 +147,7 @@ async def help(ctx):
             title = "cum",
             description = "prefix is '='\n\napart from commands, bot also responds to \"coop\", \"cope\", \"honk\"/\"honque\", \"mitten\", \"nicole\", and \"puggi\"",
             colour = embed_colour
-    )
+        )
 
         help.add_field(name="people commands", value="anthony\nbohdan\nelena\ngub\nibrahim\npogman\nnicole\nsyed\nwendy\nxander\nzach\nzomer", inline=True)
         help.add_field(name="other stuff idk", value="cock <emoji>\nheart <emoji>\nleetcode\nneutralgnag\npat\npug\nrate\nscream\ntext", inline=True)
@@ -208,10 +208,22 @@ async def status(ctx, type, *new_name):
 @bot.command()
 async def pfp(ctx, url):
     if ctx.message.author.id == 700092415910084608:
-        request = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        image = urlopen(request).read()
-        await bot.user.edit(avatar=image)
-        await ctx.send("ok")
+        url = str(url)[2:-3]
+        
+        def image(url):
+            request = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+            image = urlopen(request).read()
+            return image
+
+        if(url != ""):
+            await bot.user.edit(avatar=image(url))
+            await ctx.send("ok")
+
+        else:
+            if len(ctx.message.attachments) > 0:
+                url = ctx.message.attachments[0].url
+            await bot.user.edit(avatar=image(url))
+            await ctx.send("ok")
     else:
         await ctx.send("uwu you can't do that")
 
