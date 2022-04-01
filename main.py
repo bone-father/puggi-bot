@@ -85,7 +85,7 @@ async def on_message(message):
 
         sentence = message.content.lower()
         mitten = "mitten"
-        lucas = "Well yes, I'd love to cum in your mittens thanks for asking\n"
+        lucas = "Well yes, I love your mittens thanks for asking\n"
         count = 0
 
         for i in range(len(sentence)-5):
@@ -362,14 +362,6 @@ async def elena(ctx):
     await ctx.send(file=discord.File('images/elena.jpg'))
 
 @bot.command()
-async def ibrahim(ctx):
-    await ctx.send('Mmmmmmm 🍝💯 suckies bigg honkies 🤪 mommy 👱 milky 🍼🍆💦 yum 😋 yum 😋 suckles 🙃 ferociously 🔥🍆 I 👁 love 😍 mommy 👩 milky 🥛 yum 😋 yum 💦👅 creamy 👑💯💦 goodness 👌 pees 💦 pants 👖 oh 🙀 no 🚫🛑😤 biggy mommy 👱 pls 🙏 wipy me peepee 🤢🍆 shits 👉💩 in jeans 👖 oh 🙀 mommy 👩 pls 🙏 I 👁 made 👉 a stinky 🤢 ooopsy poopsy wipey. Momma 🙅💅 momma 🤰 biggy mommy 👱 Bobbie mommy 👱 milk 🍼 squirt 💦 in mouth 👄💧 while cleaning 🛁 poopoo 😂 oh 😬🤭😳 mommy 👩 thankie for stanky 🦠 cleanie.')
-
-@bot.command()
-async def leetcode(ctx):
-    await ctx.send('So a girl, who I will not name, agreed to the Leetcode meetup (date). We first have dinner (not dino nuggies believe it or not); some gnocchi I cooked up for her with grape tomatoes. She loved it, "exquisite cooking", she says. We then watch youtube (algoexpert leetcode interviews) in her living room. After some time passes and we learn about advanced data structures, she suddenly asks if I would like to go up to her room with her. Finally! the moment I\'ve been waiting for! I get up to her room and sit on her bed as she swiftly makes a trip to the washroom. I boot up Leetcode with my templates ready on both our computers while I await her arrival. After scrolling, I find a perfect problem to really test our skills, "reverse a binary tree". To my avail, she returns with no clothes on! I jump at the sight of such an unexpected event, and dart out of her room. I am forever shaken by this moment. Never going on a Leetcode date again in person; strictly online measures from here on out.')
-
-@bot.command()
 async def pogman(ctx):
     await ctx.send("Oh hi there! I saw you at the engineering campfire last night. I just wanted to say, it's really cool to see a woman in engineering. You may already know me, but my name is pogman. Since we're already friends, you can call me poggy. Yes, I'm pretty famous around here (I'm THE owner of the ECE 26 discord server, which is the most active one if you didn't know). Do you want to be admin in there? It would be very poggers if you would.\n\nHonestly though, I'm not sure we'd get along well; I don't want \"girl\" and \"crush\" to be in my vocabulary this year lol. But yeah, DM me if you wanna hang out. I hate sexism!")
 
@@ -377,4 +369,5 @@ async def pogman(ctx):
 async def pug(ctx):
     await ctx.send(file=discord.File('images/pug/(' + str(random.randint(1, 57)) + ').jpg'))
 
-bot.run('OTM0MzU2MDYyNDg2ODAyNDUy.Yeu45A.OOR4_ynajm5ZSgzLY1L3IJWlzBY')
+TOKEN = ""
+bot.run(TOKEN)
