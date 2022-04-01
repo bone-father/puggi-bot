@@ -313,35 +313,6 @@ async def heart(ctx, emoji):
         await ctx.send(r_1 + r_2 + r_3 + r_4 + r_5_8*4 + r_9 + r_10 + r_11 + r_12 + r_13 + r_14 + r_15 + r_16)
 
 @bot.command()
-async def cock(ctx, emoji):
-    if ctx.guild.id != 826111461734219787:
-        cock = '<:x_:935311266845712384>'
-        dick = [(cock*3 + emoji*3 + cock*3 + '\n'), (cock*2 + emoji + cock + emoji + cock + emoji + cock*2 + '\n'), 
-                (cock*2 + emoji + cock*3 + emoji + cock*2 + '\n'), (cock*2 + emoji*5 + cock*2 + '\n'), 
-                (cock + emoji*2 + cock*3 + emoji*2 + cock + '\n'), (emoji + cock*7 + emoji + '\n'), 
-                (emoji + cock*3 + emoji + cock*3 + emoji + '\n'), (cock + emoji*3 + cock + emoji*3 + cock + '\n')]
-        dick_2 = dick[0] + dick[1] + dick[2] + dick[3] + dick[2]*3 + dick[4] + dick[5]*2 + dick[6] + dick[7]
-        dick_3 = discord.Embed(title = "uwu 🍆💦", description = dick_2, colour = embed_colour)
-        character_list = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()`-=~_+[]\;\',./{}|:"<>?'
-        emoji_id = emoji[-19:-1:1]
-        emoji_name = emoji[1:len(emoji)-20:1].strip(":")
-        message_sent = False
-
-        for i in ctx.guild.emojis:
-            if emoji_id in str(i) and emoji_name in str(i) and len(emoji_id) == 18 and emoji[0] == '<' and emoji[-1] == '>' and len(emoji_name) > 1:
-                await ctx.send(embed=dick_3)
-                message_sent = True
-                break
-
-        if message_sent == False:
-            for char in emoji:
-                if char in character_list:
-                    break
-                else:
-                    await ctx.send(embed=dick_3)
-                    break
-
-@bot.command()
 async def text(ctx):
     await ctx.send(file=discord.File('images/text.jpg'))
 
